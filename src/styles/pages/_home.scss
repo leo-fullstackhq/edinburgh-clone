@@ -23,16 +23,7 @@
       }
 
       .hamburger {
-        position: absolute;
         display: none;
-        right: -57px;
-        width: 57px;
-        padding-top: 11px;
-        background-color: #000;
-
-        svg {
-          fill: #fff;
-        }
       }
 
       .sidebar-content {
@@ -130,16 +121,7 @@
         height: 100%;
 
         .hamburger {
-          position: absolute;
           display: none;
-          right: -57px;
-          width: 57px;
-          padding-top: 11px;
-          background-color: #000;
-
-          svg {
-            fill: #fff;
-          }
         }
 
         .sidebar-content {
@@ -238,16 +220,7 @@
         height: 100%;
 
         .hamburger {
-          position: absolute;
           display: none;
-          right: -57px;
-          width: 57px;
-          padding-top: 11px;
-          background-color: #000;
-
-          svg {
-            fill: #fff;
-          }
         }
 
         .sidebar-content {
@@ -390,10 +363,54 @@
   //   }
   // }
 
+  // @media screen and (max-width: 767px) {
+  //   .holder {
+  //     padding: 0;
+  //     position: relative;
+
+  //     .sidebar {
+  //       width: 190px;
+
+  //       &.show {
+  //         left: 0;
+  //         transition: all 0.4s ease-in;
+  //       }
+
+  //       .hamburger {
+  //         position: absolute;
+  //         display: block;
+  //         left: 190px;
+  //         width: 57px;
+  //         // padding-top: 11px;
+  //         background-color: #000;
+  //         z-index: 100;
+  
+  //         svg {
+  //           fill: #fff;
+  //         }
+  //       }
+
+  //       .sidebar-content {
+  //         position: absolute;
+  //         left: -190px;
+  //         width: 190px;
+  //         height: 100%;
+  //         background-color: #fff;
+  //         transition: all 0.4s ease-in-out;
+  //         z-index: 100;
+  //       }
+  //     }
+
+  //     .viewer {
+  //       width: 100%;
+  //     }
+  //   }
+  // }
+
   @media screen and (max-width: 767px) {
     .holder {
       position: relative;
-      padding: 0;
+      padding: 15px;
 
       .sidebar {
         position: absolute;
@@ -410,7 +427,22 @@
         }
 
         .hamburger {
-          display: block !important;
+          position: fixed;
+          display: block;
+          background-color: #000;
+          width: 57px;
+          left: 20px;
+          padding-top: 11px;
+          transition: all 0.4s ease-in-out;
+
+          svg {
+            fill: #fff;
+          }
+
+          &.slide {
+            transition: all 0.4s ease-in;
+            left: 190px;
+          }
         }
 
         .sidebar-content {
@@ -420,7 +452,6 @@
 
       .viewer {
         width: 100%;
-        z-index: 1;
       }
     }
   }

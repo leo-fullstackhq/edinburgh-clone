@@ -10,8 +10,10 @@ AppName.Modules.ThemeModule = (function () {
 
     $('.hamburger').click(() => {
         if ($('#side_bar').hasClass('show')) {
+          $('.hamburger').removeClass('slide')
           $('.sidebar').removeClass('show')
         } else {
+          $('.hamburger').addClass('slide')
           $('.sidebar').addClass('show')
         }
     })
