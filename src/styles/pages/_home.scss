@@ -15,6 +15,12 @@
       width: 15vw;
       height: 100%;
       overflow-y: scroll;
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+
+      &::-webkit-scrollbar {
+        display: none; /* Chrome */
+      }
 
       .hamburger {
         position: absolute;
@@ -96,7 +102,8 @@
     .viewer {
       width: 85vw;
       border: 0.6vw solid #000;
-
+      background: #000;
+      
       .tab-content {
         height: 100%;
 
@@ -403,7 +410,7 @@
         }
 
         .hamburger {
-          display: block;
+          display: block !important;
         }
 
         .sidebar-content {
@@ -413,6 +420,7 @@
 
       .viewer {
         width: 100%;
+        z-index: 1;
       }
     }
   }
