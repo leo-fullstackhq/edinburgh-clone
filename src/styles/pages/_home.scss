@@ -413,7 +413,7 @@
       padding: 15px;
 
       .sidebar {
-        position: absolute;
+        position: fixed;
         left: -190px;
         width: 190px;
         height: 100%;
@@ -435,7 +435,6 @@
           left: 20px;
           padding-top: 11px;
           transition: all 0.4s ease-in-out;
-          transform: translateZ(1px);
           
           svg {
             fill: #fff;
