@@ -403,12 +403,13 @@
           height: 35px;
           background-color: #000;
           transition: all 0.2s ease-in-out;
+          transform: scaleX(-1);
           cursor: pointer;
     
           &.slide {
             left: 167px;
             transition: all 0.2s ease-in-out;
-            transform: scaleX(-1);
+            transform: scaleX(1);
           }
         }
       }
