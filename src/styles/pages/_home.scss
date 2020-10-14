@@ -11,19 +11,21 @@
     height: 100vh;
     padding: 3vh;
 
-    .hamburger {
-      display: none;
-    }
-
     .sidebar {
       width: 15vw;
       height: 100%;
       overflow-y: scroll;
       -ms-overflow-style: none;  /* IE and Edge */
       scrollbar-width: none;  /* Firefox */
+      transition: all 0.2s ease-in-out;
 
       &::-webkit-scrollbar {
         display: none; /* Chrome */
+      }
+
+      &.collapsed {
+        width: 0;
+        transition: all 0.2s ease-in-out;
       }
 
       .sidebar-content {
@@ -91,9 +93,36 @@
     }
   
     .viewer {
+      position: relative;
       width: 85vw;
       border: 0.6vw solid #000;
-      background: #000;
+      transition: all 0.2s ease-in-out;
+      // background: #000;
+
+      .hamburger {
+        z-index: 100;
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        width: 2.5vw;
+        height: 2.5vw;
+        background-color: #000;
+        transition: all 0.2s ease-in-out;
+        
+        cursor: pointer;
+  
+        &.slide {
+          left: auto;
+          transition: all 0.2s ease-in-out;
+          transform: scaleX(-1);
+        }
+      }
+
+      &.full {
+        width: 100vw;
+        transition: all 0.2s ease-in-out;
+      }
       
       .tab-content {
         height: 100%;
@@ -103,8 +132,6 @@
           padding:0px;
           height: 100%;
         }
-
-
       }
     }
   }
@@ -116,17 +143,9 @@
       height: 100vh;
       padding: 15px;
 
-      .hamburger {
-        display: none;
-      }
-
       .sidebar {
         width: 23%;
         height: 100%;
-
-        .hamburger {
-          display: none;
-        }
 
         .sidebar-content {
           .logo-holder {
@@ -193,8 +212,28 @@
       }
     
       .viewer {
+        position: relative;
         width: 77%;
         border: 8px solid #000;
+
+        .hamburger {
+          z-index: 100;
+          position: absolute;
+          display: block;
+          left: 0;
+          top: 0;
+          width: 35px;
+          height: 35px;
+          background-color: #000;
+          transition: all 0.2s ease-in-out;
+          cursor: pointer;
+    
+          &.slide {
+            left: auto;
+            transition: all 0.2s ease-in-out;
+            transform: scaleX(-1);
+          }
+        }
 
         .tab-content {
           height: 100%;
@@ -219,17 +258,10 @@
       height: 100vh;
       padding: 15px;
 
-      .hamburger {
-        display: none;
-      }
-
       .sidebar {
         width: 23%;
         height: 100%;
 
-        .hamburger {
-          display: none;
-        }
 
         .sidebar-content {
           .logo-holder {
@@ -294,8 +326,28 @@
       }
     
       .viewer {
+        position: relative;
         width: 77%;
         border: 8px solid #000;
+
+        .hamburger {
+          z-index: 100;
+          position: absolute;
+          display: block;
+          left: 0;
+          top: 0;
+          width: 35px;
+          height: 35px;
+          background-color: #000;
+          transition: all 0.2s ease-in-out;
+          cursor: pointer;
+    
+          &.slide {
+            left: auto;
+            transition: all 0.2s ease-in-out;
+            transform: scaleX(-1);
+          }
+        }
 
         .tab-content {
           height: 100%;
@@ -317,48 +369,48 @@
       position: relative;
       padding: 15px;
 
-      .hamburger {
-        z-index: 100;
-        position: fixed;
-        display: block;
-        background-color: #000;
-        width: 57px;
-        height: 50px;
-        left: 20px;
-        padding: 11px;
-        transition: all 0.4s ease-in-out;
-        
-        svg {
-          fill: #fff;
-        }
-
-        &.slide {
-          transition: all 0.4s ease-in;
-          left: 190px;
-        }
-      }
-
       .sidebar {
         position: fixed;
         left: -190px;
         width: 190px;
         height: 100%;
         background-color: #fff;
-        transition: all 0.4s ease-in-out;
+        transition: all 0.2s ease-in-out;
         z-index: 10;
-
-        &.show {
-          left: 0;
-          transition: all 0.4s ease-in;
-        }
 
         .sidebar-content {
           width: 190px;
+          padding-bottom: 30px;
+        }
+
+        &.collapsed {
+          left: 0;
+          width: 190px;
+          transition: all 0.2s ease-in-out;
         }
       }
 
       .viewer {
         width: 100%;
+
+        .hamburger {
+          z-index: 100;
+          position: absolute;
+          display: block;
+          left: 0;
+          top: 0;
+          width: 35px;
+          height: 35px;
+          background-color: #000;
+          transition: all 0.2s ease-in-out;
+          cursor: pointer;
+    
+          &.slide {
+            left: 167px;
+            transition: all 0.2s ease-in-out;
+            transform: scaleX(-1);
+          }
+        }
       }
     }
   }
