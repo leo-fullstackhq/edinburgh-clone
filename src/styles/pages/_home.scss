@@ -95,9 +95,8 @@
     .viewer {
       position: relative;
       width: 85vw;
-      border: 0.6vw solid #000;
       transition: all 0.2s ease-in-out;
-      // background: #000;
+      background: #000;
 
       .hamburger {
         z-index: 100;
@@ -105,6 +104,8 @@
         display: block;
         left: 0;
         top: 0;
+        margin-top: 5px;
+        margin-left: 5px;
         width: 2.5vw;
         height: 2.5vw;
         background-color: #000;
@@ -126,6 +127,9 @@
       
       .tab-content {
         height: 100%;
+        border-color: #000;
+        border-width: 0.6vw;
+        border-style: solid;
 
         .tab-pane {
           margin:0px;
@@ -214,7 +218,6 @@
       .viewer {
         position: relative;
         width: 77%;
-        border: 8px solid #000;
 
         .hamburger {
           z-index: 100;
@@ -237,14 +240,15 @@
 
         .tab-content {
           height: 100%;
+          border-color: #000;
+          border-width: 8px;
+          border-style: solid;
 
           .tab-pane {
             margin:0px;
             padding:0px;
             height: 100%;
           }
-
-
         }
       }
     }
@@ -328,7 +332,6 @@
       .viewer {
         position: relative;
         width: 77%;
-        border: 8px solid #000;
 
         .hamburger {
           z-index: 100;
@@ -351,14 +354,15 @@
 
         .tab-content {
           height: 100%;
+          border-color: #000;
+          border-width: 8px;
+          border-style: solid;
 
           .tab-pane {
             margin:0px;
             padding:0px;
             height: 100%;
           }
-
-
         }
       }
     }
@@ -407,10 +411,16 @@
           cursor: pointer;
     
           &.slide {
-            left: 167px;
+            left: 170px;
             transition: all 0.2s ease-in-out;
             transform: scaleX(1);
           }
+        }
+
+        .tab-content {
+          border-color: #000;
+          border-width: 8px;
+          border-style: solid;
         }
       }
     }
