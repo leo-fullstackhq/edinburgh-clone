@@ -7,12 +7,21 @@ AppName.Modules.ThemeModule = (function () {
   ////////////////////
   const _privateMethod = () => {
     // private stuff
+    $( document ).ready(function() {
 
-    $('.hamburger').click(() => {
-      $('.sidebar').toggleClass('collapsed')
-      $('.hamburger').toggleClass('slide')
-      $('.viewer').toggleClass('full')
-    })
+      $('.hamburger').click(() => {
+        $('.sidebar').toggleClass('collapsed')
+        $('.hamburger').toggleClass('slide')
+        $('.viewer').toggleClass('full')
+      })
+
+      var count = $('.nav').children().length; 
+
+      if (count <= 3) {
+        $('.nav-link').css('margin-bottom', '1.7vw');
+      }
+      
+    });
   };
 
   /////////////////////
